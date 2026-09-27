@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "strict": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "target": "ES2022",
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
+    "skipLibCheck": true,
+    "declaration": true,
+    "outDir": "dist",
+    "paths": {
+      "@forge/core": [
+        "../core/src"
+      ]
+    }
+  },
+  "paths": {
+    "@forge/core": [
+      "../core/src"
+    ]
+  },
+  "references": [
+    {
+      "path": "../core/tsconfig.json"
+    }
+  ],
+  "include": [
+    "src/**/*.ts"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@forge/editor",
+  "version": "0.7.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@forge/core": "0.7.0",
+    "@forge/shared": "0.7.0",
+    "@forge/renderer-three": "0.7.0",
+    "@forge/renderer-2d": "0.7.0"
+  }
+}

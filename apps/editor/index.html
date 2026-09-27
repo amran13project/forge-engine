@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forge Engine</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="boot-error" hidden></div>
+    <script>
+      (() => {
+        const box = document.getElementById('boot-error');
+        const show = (message) => {
+          if (!box) return;
+          box.hidden = false;
+          box.innerHTML = '<strong>Forge Engine failed to start</strong><span>' + String(message).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])) + '</span>';
+        };
+        window.addEventListener('error', (event) => show(event.error?.stack || event.message || 'Unknown renderer error'));
+        window.addEventListener('unhandledrejection', (event) => show(event.reason?.stack || event.reason || 'Unhandled promise rejection'));
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

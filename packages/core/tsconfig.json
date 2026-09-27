@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "strict": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2022",
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "paths": {
+      "@forge/shared": [
+        "../shared/src"
+      ]
+    }
+  },
+  "references": [
+    {
+      "path": "../shared/tsconfig.json"
+    }
+  ],
+  "include": [
+    "src/**/*.ts"
+  ]
+}

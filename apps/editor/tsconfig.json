@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "target": "ES2022",
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
+    "types": [
+      "vite/client",
+      "node"
+    ],
+    "skipLibCheck": true,
+    "paths": {
+      "@forge/core": [
+        "../../packages/core/src"
+      ],
+      "@forge/shared": [
+        "../../packages/shared/src"
+      ],
+      "@forge/renderer-three": [
+        "../../packages/renderer-three/src"
+      ],
+      "@forge/renderer-2d": [
+        "../../packages/renderer-2d/src"
+      ]
+    }
+  },
+  "references": [
+    {
+      "path": "../../packages/core/tsconfig.json"
+    },
+    {
+      "path": "../../packages/shared/tsconfig.json"
+    },
+    {
+      "path": "../../packages/renderer-three/tsconfig.json"
+    },
+    {
+      "path": "../../packages/renderer-2d/tsconfig.json"
+    }
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "vite.config.ts"
+  ]
+}
